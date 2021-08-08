@@ -6,7 +6,7 @@
  * DONE: Button pt2: Set button color upon initialization | Initialize button in beats["65"]
  * DONE: Button pt3: Complete select function to set the color and shadow of button upon pressing
  * DONE: Button pt4: Call the select() function upon key press ;)
- * TODO: Button pt5: Add transition for button selection
+ * DONE: Button pt5: Add transition for button selection
  * TODO: Button pt6: Remove the button style upon transition end | Use deselect function
  * TODO: Complete all button instances with the following colors
  * TODO: Add background image
