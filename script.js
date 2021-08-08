@@ -1,7 +1,7 @@
 /**
  * DONE: Create a keydown listener to track what keys are hit
  * DONE: Create a Beat class to represent the beat object in utils.js
- * TODO: Complete triggerBeat() to play upon the press of a,s,d,f,g,h,j,k,l
+ * DONE: Complete triggerBeat() to play upon the press of a,s,d,f,g,h,j,k,l
  * TODO: Button pt1: Initialize color and element values
  * TODO: Button pt2: Set button color upon initialization | Initialize button in beats["65"]
  * TODO: Button pt3: Complete select function to set the color and shadow of button upon pressing
@@ -50,7 +50,14 @@ let beats = {
  * HINT: use the keyCode
  */
 triggerBeat = (event) => {
-
+    const keyCode = event.keyCode;
+    console.log(keyCode);
+    if(keyCode in beats)
+    {
+        let keyPress = beats[keyCode];
+        // console.log(keyPress);      // this is obj of Beat
+        keyPress.beat.play()
+    }
 }
 
 /**
@@ -58,7 +65,4 @@ triggerBeat = (event) => {
  * HINT: Log the keyCode of the key
  */
 
-document.addEventListener('keydown', (event) => {
-    // console.log(event);   // this will display the whole object listen by keydown event
-    console.log(event.keyCode);
-})
+document.addEventListener('keydown', triggerBeat)   // eventListener me direct func() name pass krenge to event pass ho jayega as a parameter by default
