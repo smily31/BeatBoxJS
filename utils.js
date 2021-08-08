@@ -3,7 +3,20 @@
  * HINT: Make sure to pass in the audioSrc as parameter to create a new audio track
  * HINT: Create a play function to play the audio if called 
  */
+
+//We have Audio class by js to initialise and play audio 
+//We will use this to initialise in our Beat class
 class Beat {
+    constructor (audioSrc)
+    {
+        this.audio = new Audio(audioSrc);
+        // console.log(this.audio);     //to test 
+    }
+
+    play = () =>{
+        this.audio.currentTime = 0;    // this will reset the audio and replay;
+        this.audio.play();
+    } 
 }
 
 
