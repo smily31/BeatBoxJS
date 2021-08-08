@@ -30,6 +30,7 @@ class Button {
         this.element = document.getElementById(keyCode);
         console.log(this.element);    // to test
         this.setButtonColorInHTML();
+        this.setATransitionendListener();
     }
 
     /**
@@ -51,5 +52,20 @@ class Button {
      * Deselect function to reset background color and boxShadow
      */
     deselect = () => {
+        this.element.style.backgroundColor = "transparent";
+        this.element.style.boxShadow = "none";
     }
+
+    /*
+     * Problem : When to call this deselect function? 
+     */
+    // Solution 1: Remove style on keyup
+    // Solution 2: Wait a certain amount of time to remove style
+    // Solution 3: React on transitionend event     {best approach for this problem}
+    setATransitionendListener = () => {
+        document.addEventListener('transitionend',() => {
+            this.deselect();
+        })
+    }
+
 }
