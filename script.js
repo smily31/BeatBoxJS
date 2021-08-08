@@ -60,11 +60,9 @@ let beats = {
  */
 triggerBeat = (event) => {
     const keyCode = event.keyCode;
-    console.log(keyCode);
     if(keyCode in beats)
     {
         let keyPress = beats[keyCode];
-        // console.log(keyPress);      // this is obj of Beat
         keyPress.beat.play()
         keyPress.button.select();
     }
@@ -74,5 +72,4 @@ triggerBeat = (event) => {
  * Keydown listener to fire triggerBeat function
  * HINT: Log the keyCode of the key
  */
-
 document.addEventListener('keydown', triggerBeat)   // eventListener me direct func() name pass krenge to event pass ho jayega as a parameter by default

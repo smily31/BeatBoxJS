@@ -28,7 +28,6 @@ class Button {
         this.color = color;
         this.keyCode = keyCode;
         this.element = document.getElementById(keyCode);
-        console.log(this.element);    // to test
         this.setButtonColorInHTML();
         this.setATransitionendListener();
     }
@@ -67,5 +66,4 @@ class Button {
             this.deselect();
         })
     }
-
 }
