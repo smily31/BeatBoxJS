@@ -10,8 +10,6 @@ class Beat {
     constructor (audioSrc)
     {
         this.audio = new Audio(audioSrc);
-        console.log(this.audio);     //to test 
-        // this.audio.play();      //this is not working like that
     }
 
     play = () =>{
@@ -27,6 +25,10 @@ class Beat {
  */
 class Button {
     constructor(color, keyCode){
+        this.color = color;
+        this.keyCode = keyCode;
+        this.element = document.getElementById(keyCode);
+        console.log(this.element);    // to test
     }
 
     /**
