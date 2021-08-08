@@ -29,12 +29,14 @@ class Button {
         this.keyCode = keyCode;
         this.element = document.getElementById(keyCode);
         console.log(this.element);    // to test
+        this.setButtonColorInHTML();
     }
 
     /**
      * Set the button color based on color specified
      */
     setButtonColorInHTML = () => {
+        this.element.style.borderColor = this.color;
     }
 
     /**

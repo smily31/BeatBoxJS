@@ -3,7 +3,7 @@
  * DONE: Create a Beat class to represent the beat object in utils.js
  * DONE: Complete triggerBeat() to play upon the press of a,s,d,f,g,h,j,k,l
  * DONE: Button pt1: Initialize color and element values
- * TODO: Button pt2: Set button color upon initialization | Initialize button in beats["65"]
+ * DONE: Button pt2: Set button color upon initialization | Initialize button in beats["65"]
  * TODO: Button pt3: Complete select function to set the color and shadow of button upon pressing
  * TODO: Button pt4: Call the select() function upon key press ;)
  * TODO: Button pt5: Add transition for button selection
